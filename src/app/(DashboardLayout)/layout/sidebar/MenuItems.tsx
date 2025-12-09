@@ -4,6 +4,7 @@ import {
   IconChartBar,
   IconSearch,
   IconLayoutDashboard,
+  IconTargetArrow,
 } from "@tabler/icons-react";
 
 const Menuitems = [
@@ -40,6 +41,12 @@ const Menuitems = [
     title: "Keyword Research",
     icon: IconSearch,
     href: "/keyword-research",
+  },
+  {
+    id: "competitor-analysis",
+    title: "Competitor Analysis",
+    icon: IconTargetArrow,
+    href: "/competitor-analysis",
   },
 ];
 

@@ -2,6 +2,7 @@
 import { Grid, Box } from '@mui/material';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
 // components
+import AhrefsSnapshot from '@/app/(DashboardLayout)/components/dashboard/AhrefsSnapshot';
 import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/SalesOverview';
 import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/YearlyBreakup';
 import RecentTransactions from '@/app/(DashboardLayout)/components/dashboard/RecentTransactions';
@@ -13,6 +14,9 @@ const Dashboard = () => {
     <PageContainer title="Dashboard" description="SEO/Ahrefs-style overview">
       <Box>
         <Grid container spacing={3}>
+          <Grid size={{ xs: 12 }}>
+            <AhrefsSnapshot />
+          </Grid>
           <Grid
             size={{
               xs: 12,
