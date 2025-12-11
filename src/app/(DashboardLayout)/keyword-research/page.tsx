@@ -1,6 +1,6 @@
 'use client'
 import { useMemo, useState } from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import { Box, Stack, Typography, Button, TextField, Select, MenuItem, Divider, Chip, LinearProgress, Table, TableHead, TableRow, TableCell, TableBody, Paper } from '@mui/material';
 import { IconSparkles, IconUpload, IconSearch, IconGlobe, IconArrowUpRight } from '@tabler/icons-react';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';

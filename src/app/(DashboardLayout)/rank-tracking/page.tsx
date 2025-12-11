@@ -1,5 +1,5 @@
 'use client'
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import { Box, Stack, Typography, Divider, Chip, Button, Paper, LinearProgress, Avatar, IconButton } from '@mui/material';
 import { IconPlus, IconWorld, IconUsers, IconShare2, IconLink } from '@tabler/icons-react';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
