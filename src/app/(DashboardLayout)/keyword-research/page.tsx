@@ -1,6 +1,5 @@
 'use client'
 import { useMemo, useState } from 'react';
-import Grid from '@mui/material/Grid';
 import { Box, Stack, Typography, Button, TextField, Select, MenuItem, Divider, Chip, LinearProgress, Table, TableHead, TableRow, TableCell, TableBody, Paper } from '@mui/material';
 import { IconSparkles, IconUpload, IconSearch, IconGlobe, IconArrowUpRight } from '@tabler/icons-react';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
@@ -136,8 +135,14 @@ const KeywordResearchPage = () => {
             <Typography variant="h5" fontWeight={700}>
               Overview: {primaryTerm}
             </Typography>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={3}>
+            <Box
+              sx={{
+                display: 'grid',
+                gap: 3,
+                gridTemplateColumns: { xs: '1fr', md: 'repeat(4, 1fr)' },
+              }}
+            >
+              <Box>
                 <Paper variant="outlined" sx={{ p: 2 }}>
                   <Typography variant="subtitle2" color="textSecondary">
                     Keyword Difficulty
@@ -150,8 +155,8 @@ const KeywordResearchPage = () => {
                   </Typography>
                   <LinearProgress variant="determinate" value={63} sx={{ mt: 2 }} />
                 </Paper>
-              </Grid>
-              <Grid item xs={12} md={3}>
+              </Box>
+              <Box>
                 <Paper variant="outlined" sx={{ p: 2 }}>
                   <Typography variant="subtitle2" color="textSecondary">
                     Search volume
@@ -168,8 +173,8 @@ const KeywordResearchPage = () => {
                     <Chip label="CPS 0.48" size="small" />
                   </Stack>
                 </Paper>
-              </Grid>
-              <Grid item xs={12} md={3}>
+              </Box>
+              <Box>
                 <Paper variant="outlined" sx={{ p: 2 }}>
                   <Typography variant="subtitle2" color="textSecondary">
                     Traffic Potential
@@ -190,8 +195,8 @@ const KeywordResearchPage = () => {
                     </Typography>
                   </Stack>
                 </Paper>
-              </Grid>
-              <Grid item xs={12} md={3}>
+              </Box>
+              <Box>
                 <Paper variant="outlined" sx={{ p: 2 }}>
                   <Stack direction="row" alignItems="center" spacing={1}>
                     <IconGlobe size={18} />
@@ -219,15 +224,21 @@ const KeywordResearchPage = () => {
                     ))}
                   </Stack>
                 </Paper>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
 
             <Paper variant="outlined" sx={{ p: 2 }}>
               <Typography variant="h6" mb={2}>
                 Keyword ideas
               </Typography>
-              <Grid container spacing={2}>
-                <Grid item xs={12} md={6} lg={3}>
+              <Box
+                sx={{
+                  display: 'grid',
+                  gap: 2,
+                  gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' },
+                }}
+              >
+                <Box>
                   <Typography variant="subtitle2" color="textSecondary" mb={1}>
                     Terms match
                   </Typography>
@@ -241,8 +252,8 @@ const KeywordResearchPage = () => {
                       ))}
                     </TableBody>
                   </Table>
-                </Grid>
-                <Grid item xs={12} md={6} lg={3}>
+                </Box>
+                <Box>
                   <Typography variant="subtitle2" color="textSecondary" mb={1}>
                     Questions
                   </Typography>
@@ -262,8 +273,8 @@ const KeywordResearchPage = () => {
                       ))}
                     </TableBody>
                   </Table>
-                </Grid>
-                <Grid item xs={12} md={6} lg={3}>
+                </Box>
+                <Box>
                   <Typography variant="subtitle2" color="textSecondary" mb={1}>
                     Also rank for
                   </Typography>
@@ -283,8 +294,8 @@ const KeywordResearchPage = () => {
                       ))}
                     </TableBody>
                   </Table>
-                </Grid>
-                <Grid item xs={12} md={6} lg={3}>
+                </Box>
+                <Box>
                   <Typography variant="subtitle2" color="textSecondary" mb={1}>
                     Also talk about
                   </Typography>
@@ -298,8 +309,8 @@ const KeywordResearchPage = () => {
                       ))}
                     </TableBody>
                   </Table>
-                </Grid>
-              </Grid>
+                </Box>
+              </Box>
               <Button endIcon={<IconArrowUpRight size={16} />} sx={{ mt: 1 }} variant="text">
                 View full keyword ideas
               </Button>
