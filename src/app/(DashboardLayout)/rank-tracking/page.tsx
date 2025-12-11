@@ -1,5 +1,5 @@
 'use client'
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import { Box, Stack, Typography, Divider, Chip, Button, Paper, LinearProgress, Avatar, IconButton } from '@mui/material';
 import { IconPlus, IconWorld, IconUsers, IconShare2, IconLink } from '@tabler/icons-react';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
@@ -49,7 +49,7 @@ const RankTrackingPage = () => {
         >
           <Paper variant="outlined" sx={{ p: { xs: 2, md: 3 } }}>
             <Grid container spacing={2}>
-              <Grid xs={12} md={3}>
+              <Grid item xs={12} md={3}>
                 <Stack spacing={0.75} sx={{ height: '100%' }}>
                   <Typography variant="subtitle2" color="textSecondary">Share of Voice</Typography>
                   <Stack direction="row" spacing={1} alignItems="baseline">
@@ -59,7 +59,7 @@ const RankTrackingPage = () => {
                   <Typography variant="caption" color="textSecondary">SoTV: 8.9%</Typography>
                 </Stack>
               </Grid>
-              <Grid xs={12} md={3} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
+              <Grid item xs={12} md={3} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
                 <Stack spacing={0.75} sx={{ height: '100%' }}>
                   <Typography variant="subtitle2" color="textSecondary">Average position</Typography>
                   <Stack direction="row" spacing={1} alignItems="baseline">
@@ -74,7 +74,7 @@ const RankTrackingPage = () => {
                   </Stack>
                 </Stack>
               </Grid>
-              <Grid xs={12} md={3} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
+              <Grid item xs={12} md={3} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
                 <Stack spacing={0.75} sx={{ height: '100%' }}>
                   <Typography variant="subtitle2" color="textSecondary">Traffic</Typography>
                   <Stack direction="row" spacing={1} alignItems="baseline">
@@ -91,7 +91,7 @@ const RankTrackingPage = () => {
                   </Stack>
                 </Stack>
               </Grid>
-              <Grid xs={12} md={3} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
+              <Grid item xs={12} md={3} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
                 <Stack spacing={0.75} sx={{ height: '100%' }}>
                   <Typography variant="subtitle2" color="textSecondary">Keywords</Typography>
                   <Stack direction="row" spacing={1} alignItems="baseline">
@@ -106,7 +106,7 @@ const RankTrackingPage = () => {
 
           <Paper variant="outlined" sx={{ p: { xs: 2, md: 3 }, mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid xs={12} md={8}>
+              <Grid item xs={12} md={8}>
                 <Typography variant="subtitle2" color="textSecondary" mb={1}>Rank distribution</Typography>
                 <Stack spacing={1.5}>
                   {keywordBands.map((band) => (
@@ -120,7 +120,7 @@ const RankTrackingPage = () => {
                   ))}
                 </Stack>
               </Grid>
-              <Grid xs={12} md={4} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
+              <Grid item xs={12} md={4} sx={{ borderLeft: { md: '1px solid', xs: 'none' }, borderColor: 'divider', pl: { md: 2 } }}>
                 <Stack spacing={2}>
                   <Stack direction="row" spacing={1} alignItems="center">
                     <IconUsers size={16} />
